@@ -104,43 +104,32 @@ namespace Homework01 {
         glEnd();
     }
 
+    void DrawCircle(GLfloat r, GLfloat g, GLfloat b, GLfloat scale, GLfloat points, GLfloat start)
+    {
+        glColor3f(r, g, b);
+        glBegin(GL_POLYGON);
+
+        for (long float i = start; i < points + 1; ++i) {
+            const float x = sin(i / points * 2 * M_PI) * scale;
+            const float y = cos(i / points * 2 * M_PI) * scale;
+
+            glVertex2f(x, y);
+        }
+
+        glEnd();
+    }
+
     void Display8() {
         // trasare poligon convex GL_QUADS : (v0,v1,v2, ..., v_{n-1})
-        glBegin(GL_POLYGON);
         // de completat ...
-        glColor3f(0.2, 0.15, 0.88); // albastru
-        const float points = 6;
-        const long float start = 0.5;
-        float scale = 0.75;
-        for (long float i = start; i < 7; ++i) {
-            const float x = sin(i / points * 2 * M_PI) * scale;
-            const float y = cos(i / points * 2 * M_PI) * scale;
 
-            glVertex2f(x, y);
-        }
-        glEnd();
+        // albastru
+        DrawCircle(0.2, 0.15, 0.88, 0.75, 6, 0.5);
+        // rosu
+        DrawCircle(1, 0.1, 0.1, 0.5, 6, 0.5);
+        // alb
+        DrawCircle(1, 1, 1, 0.45, 6, 0.5);
 
-        glBegin(GL_POLYGON);
-        glColor3f(1, 0.1, 0.1); // rosu
-        scale = 0.5;
-        for (long float i = start; i < 7; ++i) {
-            const float x = sin(i / points * 2 * M_PI) * scale;
-            const float y = cos(i / points * 2 * M_PI) * scale;
-
-            glVertex2f(x, y);
-        }
-        glEnd();
-
-        glBegin(GL_POLYGON);
-        glColor3f(1, 1, 1); // alb
-        scale = 0.45;
-        for (long float i = start; i < 7; ++i) {
-            const float x = sin(i / points * 2 * M_PI) * scale;
-            const float y = cos(i / points * 2 * M_PI) * scale;
-
-            glVertex2f(x, y);
-        }
-        glEnd();
         // COMPLETAT ^
     }
 
@@ -255,7 +244,7 @@ namespace Homework01 {
             x, y);
     }
 
-    void RunHomework01(int argc, char** argv) {
+    void Run(int argc, char** argv) {
         // Initializarea bibliotecii GLUT. Argumentele argc
         // si argv sunt argumentele din linia de comanda si nu 
         // trebuie modificate inainte de apelul functiei 

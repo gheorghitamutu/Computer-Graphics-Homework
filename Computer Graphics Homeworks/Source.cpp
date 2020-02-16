@@ -8,7 +8,7 @@
 
 int main(int argc, char** argv)
 {
-    Homework01::RunHomework01(argc, argv);
+    Homework01::Run(argc, argv);
 
     return 0;
 }

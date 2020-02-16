@@ -35,6 +35,8 @@ namespace Homework01
 
     void Display7();
 
+    void DrawCircle(GLfloat r, GLfloat g, GLfloat b, GLfloat scale, GLfloat points, GLfloat start);
+
     void Display8();
 
     void Init(void);
@@ -60,5 +62,5 @@ namespace Homework01
     */
     void MouseFunc(int button, int state, int x, int y);
 
-    void RunHomework01(int argc, char** argv);
+    void Run(int argc, char** argv);
 }
