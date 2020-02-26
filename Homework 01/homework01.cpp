@@ -1,4 +1,4 @@
-#include "l01p1stud.h"
+#include "homework01.h"
 
 namespace Homework01 {
 
@@ -109,7 +109,7 @@ namespace Homework01 {
         glColor3f(r, g, b);
         glBegin(GL_POLYGON);
 
-        for (long float i = start; i < points + 1; ++i) {
+        for (long float i = start; i < points + 1.0; ++i) {
             const float x = sin(i / points * 2 * M_PI) * scale;
             const float y = cos(i / points * 2 * M_PI) * scale;
 

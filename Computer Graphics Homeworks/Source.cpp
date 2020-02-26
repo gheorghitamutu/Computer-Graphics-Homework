@@ -1,4 +1,5 @@
-#include "l01p1stud.h"
+#include "homework01.h"
+#include "homework02.h"
 
 
 /*
@@ -9,6 +10,7 @@
 int main(int argc, char** argv)
 {
     Homework01::Run(argc, argv);
+    //Homework02::Run(argc, argv);
 
     return 0;
 }

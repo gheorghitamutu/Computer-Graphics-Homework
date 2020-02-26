@@ -10,7 +10,7 @@ namespace Homework01
     // OpenGL sunt prefixate cu gl, cele din GLU cu glu si
     // cele din GLUT cu glut.
 
-#include <GL/glut.h>
+#include <GL/freeglut.h>
 
 #include <stdlib.h>
 #include <stdio.h>
